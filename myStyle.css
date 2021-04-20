@@ -1,22 +1,32 @@
 /* This is my CSS file */
 /* Background Color */
-.background {
-    background-color:blue;
-  }
+
   .my-lists {
-    background-color: magenta;
+    background-color: rgba(255,182,193);
+    border: 8px solid green;
+    border-radius: .5em;
+    padding: .5em;
   }
   h1 {
     background-color: black;
     color: white;
   }
+  h1:hover{
+    color:yellow;
+  }
   h2 {
     background-color: cyan;
     color: orange;
   }
+  h2:hover{
+    color: magenta;
+  }
   h3 {
     background-color: yellow;
     color: rgb(0, 0, 0);
+  }
+  h3:hover{
+    color: lime;
   }
 
   /* Unit */
@@ -31,22 +41,107 @@
   .rems li {
     font-size: 1rem;
   }
+  
   .dialogue{
     position: absolute;
-    width:200px;
-    padding: 1em;
+    width:280px;
+    padding: 5px;
     border-radius: .5em;
     border: 5px solid rebeccapurple;
     background-color: lightblue;
-    color: white;
-    left: 70px;
+    color: black;
+    left: 30px;
+    text-decoration: underline wavy purple;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    
   }
   
   .dialogue::after {
     content: "I'm gonna eat your brain!"
   }
 
+  .dialogue:hover {
+    color: teal;
+  }
+
   /* Text */
-  /* Color */
-  /* 50% translucent in red*/
-p { color: rgba(255,182,193); }
+  
+p { color: rgba(255,182,193); 
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    border: 2px solid magenta;
+    padding: .5em;
+}
+
+p:hover{
+  color:tomato;
+}
+
+p:active{
+  background-color: blanchedalmond;
+}
+
+li {
+  border: 2px solid blue;
+  padding: .5em;
+  margin: .1em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+/* Any button over which the user's pointer is hovering */
+/* Active paragraphs */
+button:hover{
+  color: white;
+}
+
+a:link { color: blue; }          /* Unvisited links */
+a:visited { color: black; }     /* Visited links */
+a:hover { background: yellow; color: red;}  /* Hovered links */
+a:active { color: lime; }         /* Active links */
+
+/* Set the background color of body to blue */
+body {
+  background-color: white;
+}
+
+/* On screens that are 1800px or less, set the background color to white */
+@media screen and (max-width: 4000px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 900px or less, set the background color to black */
+@media screen and (max-width: 900px) {
+  body {
+    background-color: black;
+  }
+}
+
+@media print {
+  body { font-size: 10pt; }
+}
+
+@media screen {
+  body { font-size: 13px; }
+}
+
+@media screen, print {
+  body { line-height: 1.2; }
+}
+
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 480px)
+  and (resolution: 150dpi) {
+    body { line-height: 1.4; }
+}
