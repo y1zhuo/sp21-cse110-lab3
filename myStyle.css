@@ -145,3 +145,57 @@ body {
   and (resolution: 150dpi) {
     body { line-height: 1.4; }
 }
+
+/* CSS Selector */
+/* Universal Selector */
+*.warning {
+  color: red;
+}
+/* ID Selector */
+#identified {
+  background-color: skyblue;
+}
+/* Element Selector */
+p::first-line {
+  text-transform: uppercase;
+}
+
+a {
+  color: blue;
+}
+
+/* Internal links, beginning with "#" */
+a[href^="#"] {
+  background-color: gold;
+}
+
+/* Links with "example" anywhere in the URL */
+a[href*="example"] {
+  background-color: silver;
+}
+
+/* Links with "insensitive" anywhere in the URL,
+   regardless of capitalization */
+a[href*="insensitive" i] {
+  color: cyan;
+}
+
+/* Links that end in ".org" */
+a[href$=".org"] {
+  color: red;
+}
+
+/* Links that start with "https" and end in ".org" */
+a[href^="https"][href$=".org"] {
+  color: green;
+}
+
+/* Selector lists */
+h4, .special {
+  color: blue;
+} 
+
+/* Combinators Selector */
+article > p{
+  color: green;
+}
